@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 function App() {
   return (
     <div className="container">
-      <h1>myreactstartkit!</h1>
+      <h1>MyReactStartKit!</h1>
     </div>
   );
 }

@@ -8,14 +8,15 @@ var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
 
 module.exports = {
   entry: {
-    app: path.resolve(APP_PATH, 'index.jsx')
+    app: path.resolve(APP_PATH, 'app.jsx')
   },
   output: {
     path: BUILD_PATH,
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['','.js','.jsx']
+    extensions: ['','.js','.jsx'],
+    root: APP_PATH
   },
   devtool:'eval-source-map',
   devServer: {
@@ -26,13 +27,6 @@ module.exports = {
   },
 
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        loaders: ['eslint'],
-        include: APP_PATH
-      }
-    ],
     loaders: [
       {
         test: /\.jsx?$/,
